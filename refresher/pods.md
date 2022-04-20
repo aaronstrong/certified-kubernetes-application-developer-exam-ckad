@@ -60,3 +60,13 @@ From the cluster, deploy the pod with the command below:
 ```kubectl
 kubectl create -f pod-defintion.yaml
 ```
+A shortcut to create a yaml file:
+```
+kubectl run redis --image=redis --dry-run=client -o yaml > pod.yaml
+kubectl get pod <pod-name> -o yaml > pod-definition.yaml
+```
+
+Command to edit an existing pod:
+```
+kubectl edit pod <name of pod>
+```
